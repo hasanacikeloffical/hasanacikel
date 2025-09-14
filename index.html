@@ -11,7 +11,7 @@
   <style>
     :root{
       --bg:#ffffff;           
-      --text:#222222;
+      --text:#85593e;
       --muted:#666666;
       --primary:#3f75c5;      
       --accent:#d3c8bf;       
@@ -69,7 +69,7 @@
       background-repeat: no-repeat;
     }
     .menu{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
-    .menu a{padding:8px 12px; border-radius:10px; font-weight:600; color:#0f2a52}
+    .menu a{padding:8px 12px; border-radius:10px; font-weight:600; color:#94a1a6;}
     .menu a:hover{background:color-mix(in srgb, var(--primary) 12%, white 88%)}
     .menu a.active{background:var(--primary); color:white}
     .burger{display:none; border:1px solid color-mix(in srgb, var(--primary) 25%, #000 8%); padding:8px 10px; border-radius:10px}
@@ -105,12 +105,6 @@
     /* Gallery */
     .gallery{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:10px}
     .gallery img{border-radius:12px; border:1px solid color-mix(in srgb, var(--primary) 16%, #000 6%); cursor:pointer}
-
-    /* Blog */
-    .blog-list{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:20px}
-    .post{display:flex; gap:16px; border:1px solid color-mix(in srgb, var(--primary) 16%, #000 6%); border-radius:var(--radius); overflow:hidden; background:white}
-    .post img{width:38%; object-fit:cover}
-    .post .body{padding:12px}
 
     /* Footer */
     footer{padding:36px 0; border-top:1px solid color-mix(in srgb, var(--accent) 50%, #000 4%); background:linear-gradient(0deg, color-mix(in srgb, var(--accent) 30%, white 70%), white)}
@@ -148,13 +142,9 @@
         <a href="#anasayfa" class="active">Anasayfa</a>
         <a href="#projeler">Projeler</a>
         <a href="#bootcamp">Bootcamp</a>
-        <a href="#etkinlik">Etkinlik</a>
-        <a href="#galeri">Galeri</a>
-        <a href="#travel">Travel</a>
         <a href="#egitimlerim">Eğitimlerim</a>
         <a href="#urunler">Ürünler</a>
         <a href="#kitaplar">Kitaplar</a>
-        <a href="#blog">Blog</a>
       </nav>
   </header>
 
@@ -163,11 +153,10 @@
     <div class="container hero-grid">
       <div>
         <span class="badge">Frontend • Flutter • JS</span>
-        <h1>Merhaba, ben Hasan. <br/> Web & Mobil geliştiren bir <span style="color:var(--primary)">Frontend</span> developerım.</h1>
-        <p class="lead">Bu sayfada projelerimi, katıldığım bootcamp & etkinlikleri, eğitimlerimi, ürün ve kitap listelerimi ve blog yazılarımı bulacaksınız.</p>
+        <h1>Merhaba, ben Hasan <br/> Web & Mobil geliştiren bir <span style="color:var(--primary)">Frontend</span> developerım.</h1>
+        <p class="lead">Bu sayfada projelerimi, katıldığım bootcamp & eğitimlerimi, ürün ve kitap listelerimi bulacaksınız.</p>
         <div class="cta">
           <a class="btn primary" href="#projeler">Projelerimi Gör</a>
-          <a class="btn ghost" href="#blog">Son Yazılar</a>
         </div>
       </div>
       <div class="hero-card">
@@ -184,10 +173,9 @@
   <section id="projeler">
     <div class="container">
       <h2>Projeler</h2>
-      <p class="section-lead">Web ve mobil tarafta üzerinde çalıştığım projeler.</p>
+      <p class="section-lead">Mobil ve web tarafta üzerinde çalıştığım projeler.</p>
       <div class="grid cards">
         <!-- Proje kartları -->
-        
         <article class="card">
           <img src="notepaddimg.png" alt="Projeden ekran görüntüsü" loading="lazy">
           <div class="content">
@@ -195,6 +183,12 @@
             <p class="lead">Kategori, tarih/saat damgası, kullanıcı girişi, tema geçişi.</p>
             <div style="display:flex; gap:8px; margin-top:8px">
               <span class="chip">Flutter</span><span class="chip">auth</span><span class="chip">database</span>
+            </div>
+            <div style="margin-top:12px;">
+              <a href="https://github.com/hasanacikeloffical/notepadd" target="_blank" rel="noopener" style="color:#3f75c5; font-weight:600; font-size:15px; display:inline-flex; align-items:center; gap:6px;">
+                <svg width="18" height="18" fill="currentColor" style="vertical-align:middle" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.415-4.042-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub Repos
+              </a>
             </div>
           </div>
         </article>
@@ -205,6 +199,12 @@
             <p class="lead">Modern HTML/CSS/JS, responsive tasarım, hızlı & sade.</p>
             <div style="display:flex; gap:8px; margin-top:8px">
               <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span>
+            </div>
+            <div style="margin-top:12px;">
+              <a href="https://github.com/hasanacikeloffical/portfolio" target="_blank" rel="noopener" style="color:#3f75c5; font-weight:600; font-size:15px; display:inline-flex; align-items:center; gap:6px;">
+                <svg width="18" height="18" fill="currentColor" style="vertical-align:middle" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.415-4.042-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub Repo
+              </a>
             </div>
           </div>
         </article>
@@ -219,6 +219,7 @@
       <p class="section-lead">Katıldığım veya takip ettiğim bootcamp programları.</p>
       <div class="grid cards">
         <article class="card">
+          <img src="mobilsertifika.png" alt="BTK Akademi Flutter Sertifika" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
           <div class="content">
             <h3>BTK Akademi • Flutter ile Mobil Uygulama Geliştirme</h3>
             <p>Dart programlama dili, Flutter framework, mobil uygulama geliştirme temelleri.</p>
@@ -226,102 +227,25 @@
           </div>
         </article>
         <article class="card">
-          <div class="content">
-            <h3>TechCareer.Net • Uygulamalarla SQL Eğitimi</h3>
-            <p>Veritabanı tasarımı, SQL sorguları, CRUD işlemleri.</p>
-            <span class="chip">Devam</span>
-          </div>
-        </article>
-        <article class="card">
+          <img src="promptsertifika.png" alt="YOBODOBO Prompt Engineering Sertifika" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
           <div class="content">
             <h3>YOBODOBO • Prompt Engineering </h3>
             <p>Yapay zeka ve dil işleme temelleri.</p>
             <span class="chip">Tamamlandı</span>
           </div>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Etkinlik -->
-  <section id="etkinlik">
-    <div class="container">
-      <h2>Etkinlik</h2>
-      <p class="section-lead">Meetup, hackathon ve topluluk etkinlikleri.</p>
-      <div class="grid cards">
         <article class="card">
+          <img src="techcareer-sql-sertifika.jpg" alt="TechCareer SQL Sertifika" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
           <div class="content">
-            <h3>GDG Mersin Meetup</h3>
-            <p>Frontend trendleri ve canlı demo.</p>
-            <span class="chip">Konuk</span>
-          </div>
-        </article>
-        <article class="card">
-          <div class="content">
-            <h3>Flutter Festival</h3>
-            <p>Widget mimarisi ve performans optimizasyonu.</p>
-            <span class="chip">Katılımcı</span>
-          </div>
-        </article>
-        <article class="card">
-          <div class="content">
-            <h3>React Hackathon</h3>
-            <p>Takım çalışması ile SPA prototipi.</p>
-            <span class="chip">Takım</span>
+            <h3>TechCareer.Net • Uygulamalarla SQL Eğitimi</h3>
+            <p>Veritabanı tasarımı, SQL sorguları, CRUD işlemleri.</p>
+            <span class="chip">Devam</span>
           </div>
         </article>
       </div>
     </div>
   </section>
-
-  <!-- Galeri -->
-  <section id="galeri" style="background:linear-gradient(180deg, white, color-mix(in srgb, var(--accent) 22%, white 78%))">
-    <div class="container">
-      <h2>Galeri</h2>
-      <p class="section-lead">Kod, ekran görüntüleri ve seyahat anıları.</p>
-      <div class="gallery" id="gallery">
-        <img src="galeri1.jpg" alt="Galeri görseli" />
-        <img src="galeri2.jpg" alt="Galeri görseli" />
-        <img src="travel1.jpg" alt="Galeri görseli" />
-        <img src="travel2.jpg" alt="Galeri görseli" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Travel -->
-  <section id="travel">
-    <div class="container">
-      <h2>Travel</h2>
-      <p class="section-lead">Gezdiğim yerlerden kısa notlar ve fotoğraflar.</p>
-      <div class="grid cards">
-        <article class="card">
-          <img src="https://picsum.photos/800/480?random=21" alt="Seyahat görseli" loading="lazy">
-          <div class="content">
-            <h3>Mersin • Sahil</h3>
-            <p>Akşam yürüyüşleri ve deniz esintisi.</p>
-            <span class="chip">Türkiye</span>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://picsum.photos/800/480?random=22" alt="Seyahat görseli" loading="lazy">
-          <div class="content">
-            <h3>Hatay • Tarih</h3>
-            <p>Lezzet ve kültür rotası.</p>
-            <span class="chip">Türkiye</span>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://picsum.photos/800/480?random=23" alt="Seyahat görseli" loading="lazy">
-          <div class="content">
-            <h3>İstanbul • Teknoloji Etkinliği</h3>
-            <p>Konferans & networking notlarım.</p>
-            <span class="chip">Etkinlik</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
+  
   <!-- Eğitimlerim -->
   <section id="egitimlerim" style="background:color-mix(in srgb, var(--accent) 18%, white 82%);">
     <div class="container">
@@ -329,8 +253,8 @@
       <p class="section-lead">Aldığım dersler, sertifikalar ve öğrenme yolları.</p>
       <div class="grid cards">
         <article class="card"><div class="content"><h3>Bilgisayar Programcılığı</h3><p>Mersin Üniversitesi • 2. sınıf</p><span class="chip">Okul</span></div></article>
-        <article class="card"><div class="content"><h3>Frontend Yol Haritası</h3><p>HTML, CSS, JS, React temelleri.</p><span class="chip">Kendi Öğrenimim</span></div></article>
-        <article class="card"><div class="content"><h3>Bioinformatik Çalışmaları</h3><p>GEO/Orange3, veri görselleştirme.</p><span class="chip">Araştırma</span></div></article>
+        <article class="card"><div class="content"><h3>Frontend Developer</h3><p>HTML, CSS, JS.</p><span class="chip">Kendi Öğrenimim</span></div></article>
+        <article class="card"><div class="content"><h3>Proje Yönetimi</h3><p>Proje planlama, zaman yönetimi, ekip koordinasyonu.</p><span class="chip">Stajer</span></div></article>
       </div>
     </div>
   </section>
@@ -339,20 +263,13 @@
   <section id="urunler">
     <div class="container">
       <h2>Ürünler</h2>
-      <p class="section-lead">Küçük dijital ürünler ve şablonlar.</p>
+      <p class="section-lead">E-ticaret siteleri ve demo projelerim ve kitaplarım.</p>
       <div class="grid cards">
         <article class="card">
           <div class="content">
             <h3>Portfolio Şablonu</h3>
             <p>Hızlı kurulum, hafif tasarım, SEO dostu.</p>
             <div class="cta"><a class="btn primary" href="#" onclick="alert('Demo yakında!')">Demo</a></div>
-          </div>
-        </article>
-        <article class="card">
-          <div class="content">
-            <h3>Not Uygulaması UI Kit</h3>
-            <p>Flutter için bileşen seti.</p>
-            <div class="cta"><a class="btn ghost" href="#" onclick="alert('İndirilecek dosya yakında!')">İndir</a></div>
           </div>
         </article>
       </div>
@@ -365,33 +282,28 @@
       <h2>Kitaplar</h2>
       <p class="section-lead">Okuduklarım ve önerilerim.</p>
       <div class="grid cards">
-        <article class="card"><div class="content"><h3>Clean Code</h3><p>Robert C. Martin</p><span class="chip">Yazılım</span></div></article>
-        <article class="card"><div class="content"><h3>Pragmatic Programmer</h3><p>Andrew Hunt, David Thomas</p><span class="chip">Yazılım</span></div></article>
-        <article class="card"><div class="content"><h3>Deep Work</h3><p>Cal Newport</p><span class="chip">Verimlilik</span></div></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog -->
-  <section id="blog">
-    <div class="container">
-      <h2>Blog Yazıları</h2>
-      <p class="section-lead">Frontend ve Flutter notlarım.</p>
-      <div class="blog-list">
-        <article class="post">
-          <img src="https://picsum.photos/800/480?random=31" alt="Blog görseli" loading="lazy">
-          <div class="body">
-            <h3>CSS Grid ile Responsive Kartlar</h3>
-            <p class="lead">Sade grid ayarlarıyla ölçeklenebilir kart düzeni.</p>
-            <a class="btn ghost" href="#" onclick="alert('Yazı içeriği için markdown dosyası ekleyin.')">Oku</a>
+        <article class="card">
+          <img src="kozmos.jpg" alt="Kozmos" style="width:100%; aspect-ratio:3/4; object-fit:cover;">
+          <div class="content">
+            <h3>Kozmos</h3>
+            <p>Carl Sagan</p>
+            <span class="chip">Evrenin ve Yaşamın Sırları</span>
           </div>
         </article>
-        <article class="post">
-          <img src="https://picsum.photos/800/480?random=32" alt="Blog görseli" loading="lazy">
-          <div class="body">
-            <h3>Fetch API ile JSON</h3>
-            <p class="lead">API'den veri çekme ve listeleme örneği.</p>
-            <a class="btn ghost" href="#" onclick="alert('Yazı içeriği için markdown dosyası ekleyin.')">Oku</a>
+        <article class="card">
+          <img src="fizik.jpg" alt="Fizik" style="width:100%; aspect-ratio:3/4; object-fit:cover;">
+          <div class="content">
+            <h3>Fizik</h3>
+            <p>AristoTeles</p>
+            <span class="chip">Yunan Felsefesi</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="insaninanlamarayaisi.jpeg" alt="İnsanın Anlam Arayışı" style="width:100%; aspect-ratio:3/4; object-fit:cover;">
+          <div class="content">
+            <h3>İnsanın Anlam Arayışı</h3>
+            <p>Victor E. Frankl</p>
+            <span class="chip">Verimlilik</span>
           </div>
         </article>
       </div>
@@ -403,14 +315,13 @@
     <div class="container footer-grid">
       <div>
         <h3 style="margin:0 0 8px">Hasan Açıkel</h3>
-        <p style="margin:0; color:var(--muted)">Frontend Developer Adayı • Mersin Üniversitesi</p>
+        <p style="margin:0; color:var(--muted)">Frontend Developer • Mersin Üniversitesi</p>
       </div>
       <div>
         <strong>Bağlantılar</strong>
         <ul style="list-style:none; padding:8px 0 0; margin:0; line-height:1.9">
           <li><a href="#projeler">Projeler</a></li>
           <li><a href="#egitimlerim">Eğitimlerim</a></li>
-          <li><a href="#blog">Blog</a></li>
         </ul>
       </div>
       <div>
@@ -418,7 +329,7 @@
         <ul style="list-style:none; padding:8px 0 0; margin:0; line-height:1.9">
           <li><a href="mailto:hasan@example.com">E‑posta</a></li>
           <li><a href="https://github.com/hasanacikeloffical" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="#" onclick="alert('LinkedIn profilini ekleyin!')">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/hasan-a%C3%A7%C4%B1kel-337b22326/" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
     </div>
@@ -430,7 +341,7 @@
     <img id="lightboxImg" src="" alt="Büyük görsel" style="max-width:100%; max-height:90vh; border-radius:16px; box-shadow:0 20px 60px rgba(0,0,0,.5); border:4px solid var(--accent)" />
   </div>
 
-  <button id="toTop" aria-label="Yukarı çık" style="position:fixed; right:16px; bottom:16px; padding:10px 12px; border-radius:12px; border:1px solid color-mix(in srgb, var(--primary) 25%, #000 8%); background:var(--primary); color:#fff; font-weight:800; box-shadow:var(--shadow); display:none;">↑</button>
+  <button id="toTop" aria-label="Yukarı çık" style="position:fixed; right:16px; bottom:16px; padding:10px 12px; border-radius:25px; border:1px solid color-mix(in srgb, var(--primary) 25%, #000 8%); background:#94a1a6; color:#fff; font-weight:700; display:none;">↑</button>
 
   <script>
     // Yıl
